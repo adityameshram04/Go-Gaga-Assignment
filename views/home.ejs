@@ -1,0 +1,39 @@
+
+<%- include("partials/header"); -%>
+
+    <h1>Home</h1>
+
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%  entries.forEach(function(entry){ %>
+        <tr>
+          <td><%=entry.name%></td>
+          <td><%=entry.location%></td>
+          
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    
+
+      <h1></h1>
+      <p>
+      
+      </p>
+  
+  
+     
+
+ 
+
+
+<%- include("partials/footer"); -%>
+

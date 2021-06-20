@@ -1,0 +1,21 @@
+<%- include("partials/header"); -%>
+<h1>Search Results</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Location</th>
+      </tr>
+    </thead>
+    <tbody>
+        <%  queryRes.forEach(function(query){ %>
+        <tr>
+            <td><%=query.name%></td>
+            <td><%=query.location%></td> 
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+
+<%- include("partials/footer"); -%>
