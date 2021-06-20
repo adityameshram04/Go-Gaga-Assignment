@@ -15,7 +15,7 @@ app.use(express.static("public"));
 //for connecting to our database
 mongoose.connect("mongodb+srv://admin-aditya:Test123@cluster0.9265w.mongodb.net/goGagaDB");
 
-//for creating a new schema for blog
+//for creating a new schema
 const entrySchema = new mongoose.Schema({
     name: String,
     location: String
@@ -29,8 +29,6 @@ app.get("/", function(req, res){
   Entry.find({}, function(err, entries){
     res.render("home", {
       entries: entries
-      // entryName: entries.name,
-      // entryLocation: entries.location
       });
   });
 });
